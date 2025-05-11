@@ -1,0 +1,146 @@
+/* Navbar base */
+.navbar {
+  background-color: transparent; /* Transparent background */
+  color: white;
+  padding: 15px 20px;
+  position: fixed; /* Sticks to the top */
+  top: 0; /* Stick to the top */
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Shadow for effect */
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container for the navbar */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Logo */
+.logo-link {
+  font-size: 1.8em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  background: linear-gradient(to right, #f0f0f0, #ccc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+}
+
+/* Nav links (Desktop) */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background-color: #888;
+  transition: width 0.3s;
+}
+
+.nav-links a:hover {
+  color: #aaa;
+  transform: translateY(-2px);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Hamburger Icon (Mobile) */
+.menu-toggle {
+  display: none;
+  font-size: 1.8em;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background-color: transparent; /* Transparent background for mobile */
+    width: 100%;
+    padding: 25px 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    text-align: center;
+    border-radius: 0 0 2px 2px; /* Rounded bottom corners */
+    animation: slideDown 0.4s ease;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 2.8em;
+  }
+}
+
+/* Slide-down animation for mobile */
+@keyframes slideDown {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/* Logo with image */
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo-image {
+  width: 45px;
+  height: 45px;
+  margin-right: 8px;
+}
+
+.brand-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1px;
+}
+

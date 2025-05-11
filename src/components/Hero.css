@@ -1,0 +1,41 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content {
+  z-index: 1; /* Keeps content above the video */
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: normal;
+}
+
+.hero-content p {
+  font-size: 1.4rem;
+  margin-top: 10px;
+}
+
+.hero-content button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.hero-content button:hover {
+  background-color: #ccc;
+}
